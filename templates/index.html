@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Product Recommendations</title>
+        <link href="https://googleapis.com/css?family=Pacifico" rel="stylesheet" type="text/css">
+        <link href="https://googleapis.com/css?family=Arimo" rel="stylesheet" type="text/css">
+        <link href="https://googleapis.com/css?family=Hind:300" rel="stylesheet" type="text/css">
+        <link href="https://googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <div class="login">
+            <h1>Recommending Top 5 products</h1>
+            <form action="{{url_for('predict')}}" method="post">
+                <input type="text" name="username" placeholder="username" required="required"/>
+
+                <button type="submit" class="btn btn-primary btn-block btn-large"> Predict </button>
+            </form>
+            <br>
+            <br>
+            {{ predicted_text }}
+        </div>
+    </body>
+</html>
